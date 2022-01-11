@@ -1,6 +1,6 @@
 @echo off
 cls
-title Zeenode Self-Bot Launcher
+title Iain's Self-Bot Launcher
 python launch.py
 echo Finished!
 pause

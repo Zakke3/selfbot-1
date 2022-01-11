@@ -1,6 +1,6 @@
 import discord, pyfiglet, requests, random, string, aiohttp, io, hashlib, base64
 from discord.ext import commands as zeenode 
-
+iain = 'iain#1031'
 class Fun(zeenode.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -30,14 +30,17 @@ class Fun(zeenode.Cog):
     async def dick(self, ctx, *, user: discord.User = None):
         await ctx.message.delete()
         if user is None:
-            user = ctx.author
-        size = random.randint(1, 50)
-        dong = ""
-        for _i in range(0, size):
-            dong += "="
-        em = discord.Embed(title=f"{user}'s Dick size:", description=f"8{dong}D", colour=0x0000)
-        await ctx.send(embed=em)
-    
+            em = discord.Embed(title="No user provided.")
+            await ctx.send(embed=em)
+            
+        else:
+            size = random.randint(1, 50)
+            dong = ""
+            for _i in range(0, size):
+                dong += "="
+            em = discord.Embed(title=f"{user}'s Dick size:", description=f"8{dong}D", colour=0x0000)
+            await ctx.send(embed=em)
+        
 
     
     
@@ -90,8 +93,18 @@ class Fun(zeenode.Cog):
         embed.set_author(name="Random Dog." , icon_url="https://cdn.discordapp.com/attachments/796868392095186976/810566380545114172/zeenode_dog.png") 
         embed.set_image(url=str(r["link"]))
         await ctx.send(embed=embed)    
-
-
+        
+    @zeenode.command()
+    async def hack(self, ctx, *, user: discord.User = None):
+        await ctx.message.delete()
+        if user is None:
+            user = ctx.author
+        else:
+            embed = discord.Embed(color=0x0000)
+            embed.set_author(name="Iain's Self-Bot", icon_url="https://cdn.discordapp.com/icons/891717404223229972/8ca7701f0ca8406f9349099c7dbea3b2.png?size=4096")
+            embed = discord.Embed(title = f"**Successfully hacked user: {user}**", description=" > Found IP address\n > Geolocating IP address\n > Found Full Name\n > *Saving to Hacked.txt*") 
+            await ctx.send(embed=embed)
+            
     @zeenode.command()
     async def nitro(self, ctx):
             await ctx.message.delete()

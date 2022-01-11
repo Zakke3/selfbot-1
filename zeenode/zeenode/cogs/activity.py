@@ -2,7 +2,7 @@ import discord, requests, pyfiglet
 from discord.ext import commands as zeenode
 from zeenode.load import token
 
-Output = "Zeenode || "
+Output = "iain#1031 || "
 
 class Activity(zeenode.Cog):
     def __init__(self, bot):
@@ -14,7 +14,7 @@ class Activity(zeenode.Cog):
         await ctx.message.delete()
         stream = discord.Streaming(
             name = message,
-            url = "https://www.twitch.tv/zeenode", 
+            url = "", 
         )
         await self.bot.change_presence(activity=stream)    
 

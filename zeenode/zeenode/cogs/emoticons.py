@@ -4,12 +4,12 @@ from discord.ext import commands as zeenode
 class emoticons(zeenode.Cog):
     def __init__(self, bot):
         self.bot = bot
-
+        
 
     @zeenode.command()
     async def listemoticons(self, ctx):
         await ctx.message.delete()
-        text = "fuckyou, lenny, what, bear, worried, ak47, awp, lmg, sword, love, goodnight, smile"
+        text = "fuckyou, 5xploit, lenny, what, bear, worried, ak47, awp, lmg, sword, love, goodnight, smile"
         await ctx.send(text)
 
     @zeenode.command()
@@ -18,6 +18,27 @@ class emoticons(zeenode.Cog):
         middle = '╭∩╮(･◡･)╭∩╮'
         await ctx.send(middle)
 
+
+    @zeenode.command()
+    async def art(self, ctx):
+        await ctx.message.delete()
+        art = """
+```lua
+888888888 Y88b   d88P 8888888b.  888      .d88888b. 8888888 88888888888 
+888        Y88b d88P  888   Y88b 888     d88P" "Y88b  888       888     
+888         Y88o88P   888    888 888     888     888  888       888     
+8888888b.    Y888P    888   d88P 888     888     888  888       888     
+     "Y88b   d888b    8888888P"  888     888     888  888       888     
+       888  d88888b   888        888     888     888  888       888     
+Y88b  d88P d88P Y88b  888        888     Y88b. .d88P  888       888     
+ "Y8888P" d88P   Y88b 888        88888888 "Y88888P" 8888888     888 
+ 
+                                                      Made by iain#1031
+``` 
+"""
+        await ctx.send(art)
+        
+        
     @zeenode.command()
     async def lenny(self, ctx):
         await ctx.message.delete()
